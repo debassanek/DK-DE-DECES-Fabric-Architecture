@@ -1,4 +1,4 @@
-# Dictionnaire des Données — DK-DE Liste Décès
+# Dictionnaire des Données : DK-DE-DECES . Microsoft Fabric
 
 > Projet : Analyse de la Mortalité en France · Microsoft Fabric  
 > Format de stockage : Delta Lake (OneLake)  
@@ -10,8 +10,8 @@
 
 1. [Couche Bronze](#1-couche-bronze)
 2. [Couche Silver](#2-couche-silver--silver_deces)
-3. [Couche Gold — Table de faits](#3-couche-gold--fact_deces)
-4. [Couche Gold — Agrégations](#4-couche-gold--tables-dagrégation)
+3. [Couche Gold : Table de faits](#3-couche-gold--fact_deces)
+4. [Couche Gold : Agrégations](#4-couche-gold--tables-dagrégation)
 5. [Dimensions](#5-dimensions)
 6. [Monitoring](#6-monitoring)
 
@@ -46,7 +46,7 @@ Un manifeste JSON est produit par le notebook Discover et consommé par Download
 
 ---
 
-## 2. Couche Silver — `silver_deces`
+## 2. Couche Silver : `silver_deces`
 
 **Lakehouse** : `DK_DE_ListeDeces_Silver_Clean`  
 **Table Delta** : `silver_deces`  
@@ -60,9 +60,9 @@ Un manifeste JSON est produit par le notebook Discover et consommé par Download
 | `sexe` | string | Genre | `M` = masculin, `F` = féminin |
 | `date_naissance` | date | Date de naissance | `yyyy-MM-dd` (null si inconnue) |
 | `date_deces` | date | Date de décès | `yyyy-MM-dd` |
-| `age_au_deces` | integer | Âge au moment du décès (calculé) | 0–145 ; null si dates absentes |
+| `age_au_deces` | integer | Âge au moment du décès (calculé) | 0-145 ; null si dates absentes |
 | `code_lieu_deces` | string | Code INSEE de la commune de décès | 5 caractères (zfill) |
-| `departement_deces` | string | Code département extrait du code INSEE | 2 car. (01–95) ou 3 car. (DOM-TOM) |
+| `departement_deces` | string | Code département extrait du code INSEE | 2 car. (01-95) ou 3 car. (DOM-TOM) |
 | `annee_deces` | integer | Année du décès (extraite de date_deces) | 1970–présent |
 | `mois_deces` | integer | Mois du décès (1–12) | 1–12 |
 
@@ -74,7 +74,7 @@ Un manifeste JSON est produit par le notebook Discover et consommé par Download
 
 ---
 
-## 3. Couche Gold — `fact_deces`
+## 3. Couche Gold : `fact_deces`
 
 **Lakehouse** : `DK_DE_ListeDeces_Gold_Build`  
 **Table Delta** : `fact_deces`  
@@ -86,16 +86,16 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 | Colonne | Type | Description |
 |---|---|---|
 | *(toutes les colonnes Silver)* | — | Voir section Silver |
-| `key_aggAge` | string | Clé vers `agg_mortalite_age` — format `{age}_{AnMois}` |
-| `key_aggTemporel` | string | Clé vers `agg_mortalite_mensuelle` — format `AnMois yyyyMM` |
-| `key_aggGeographie` | string | Clé vers `agg_mortalite_commune` — code INSEE commune (5 car.) |
-| `key_aggGeneration` | string | Clé vers `agg_mortalite_generation` — composite naissance+age+commune |
+| `key_aggAge` | string | Clé vers `agg_mortalite_age` : format `{age}_{AnMois}` |
+| `key_aggTemporel` | string | Clé vers `agg_mortalite_mensuelle` : format `AnMois yyyyMM` |
+| `key_aggGeographie` | string | Clé vers `agg_mortalite_commune` : code INSEE commune (5 car.) |
+| `key_aggGeneration` | string | Clé vers `agg_mortalite_generation` : composite naissance+age+commune |
 
 > Les clés sont `null` si les colonnes sources nécessaires sont absentes (ex : code_lieu_deces vide → key_aggGeographie = null).
 
 ---
 
-## 4. Couche Gold — Tables d'agrégation
+## 4. Couche Gold : Tables d'agrégation
 
 ### `agg_mortalite_age`
 
@@ -103,7 +103,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 | Colonne | Type | Description |
 |---|---|---|
-| `key_age` | string | Clé primaire — `{age}_{AnMois}` |
+| `key_age` | string | Clé primaire : `{age}_{AnMois}` |
 | `age` | integer | Âge exact au décès |
 | `id_date` | string | Période au format `yyyyMM` (jointure `dim_date`) |
 | `nb_deces` | long | Nombre total de décès |
@@ -122,7 +122,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 | Colonne | Type | Description |
 |---|---|---|
-| `id_date` | string | Clé primaire — `yyyyMM` |
+| `id_date` | string | Clé primaire : `yyyyMM` |
 | `nb_deces` | long | Nombre total de décès du mois |
 | `age_moyen_deces` | double | Âge moyen au décès |
 | `age_median_deces` | double | Âge médian au décès |
@@ -149,7 +149,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 | `nb_centenaires` | long | Décès centenaires (≥ 100 ans) |
 | `nb_mineurs` | long | Décès de mineurs (< 18 ans) |
 | `taux_mortalite` | double | Taux pour 1 000 habitants (si population connue) |
-| `anomalie_mortalite` | boolean | Indicateur z-score — commune statistiquement atypique |
+| `anomalie_mortalite` | boolean | Indicateur z-score : commune statistiquement atypique |
 
 ---
 
@@ -159,7 +159,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 | Colonne | Type | Description |
 |---|---|---|
-| `id_generation` | string | Clé composite — génération + commune + âge |
+| `id_generation` | string | Clé composite : génération + commune + âge |
 | `annee_naissance` | integer | Année de naissance de la cohorte |
 | `id_commune` | string | Code INSEE commune |
 | `age_au_deces` | integer | Âge au décès |
@@ -178,7 +178,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 | Colonne | Type | Description |
 |---|---|---|
-| `id_commune` | string | Code INSEE commune — clé primaire (5 car.) |
+| `id_commune` | string | Code INSEE commune : clé primaire (5 car.) |
 | `commune` | string | Libellé de la commune |
 | `département` | string | Nom du département |
 | `code_dept` | string | Code département (2 ou 3 caractères) |
@@ -212,7 +212,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 | Colonne | Type | Description |
 |---|---|---|
-| `age` | integer | Âge exact — clé primaire |
+| `age` | integer | Âge exact : clé primaire |
 | `tranche_age` | string | Ex. `0-4`, `5-9`, ..., `95-99`, `100+` |
 | `groupe_age` | string | Ex. `Mineur`, `Adulte`, `Senior`, `Centenaire` |
 | `est_centenaire` | boolean | Âge ≥ 100 |
@@ -224,7 +224,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 | Colonne | Type | Description |
 |---|---|---|
-| `annee_naissance` | integer | Année de naissance — clé primaire |
+| `annee_naissance` | integer | Année de naissance : clé primaire |
 | `generation` | string | Libellé générationnel (ex. `Baby-Boomers`, `Génération X`) |
 | `periode` | string | Décennie ou période (ex. `1946–1964`) |
 
@@ -247,9 +247,9 @@ Les notebooks de monitoring produisent des tables de suivi des exécutions pipel
 
 | Règle | Détail |
 |---|---|
-| **Nommage tables** | `snake_case` — préfixe par couche (`silver_`, `agg_`, `dim_`, `fact_`) |
+| **Nommage tables** | `snake_case` : préfixe par couche (`silver_`, `agg_`, `dim_`, `fact_`) |
 | **Clés primaires** | Toujours nommées `id_<entité>` ou `key_<agrégation>` |
 | **Dates** | Format ISO `yyyy-MM-dd` pour les dates, `yyyyMM` pour les clés temporelles |
 | **Codes INSEE** | Toujours zfill à 5 caractères pour les communes, 2-3 pour les départements |
 | **Valeurs manquantes** | `null` natif Delta (jamais chaîne vide `""` pour les codes) |
-| **Environnements** | Dev (1 an) · Test (3 ans) · Prod (complet) — détection automatique |
+| **Environnements** | Dev (1 an) · Test (3 ans) · Prod (complet) : détection automatique |
