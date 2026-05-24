@@ -61,6 +61,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 - Total décès · Âge moyen au décès · Ratio H/F · Nb centenaires · Nb de mineurs · Communes couvertes
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Évolution annuelle des décès | Courbe de tendance avec taux de variation YoY |
@@ -84,6 +85,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 - Âge moyen au décès Femmes / Hommes · Âge médian global · Écart longévité F/H · Indice de survie · Nb décès mineurs
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Pyramide des âges des décès | Comparaison Femmes / Hommes par tranche de 5 ans |
@@ -106,6 +108,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 - Taux mortalité moyen · Densité des décès · Indice vieillissement médian · Communes à anomalie · Nb décès mineurs
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Top 15 communes | Classement horizontal des communes les plus touchées en volume absolu |
@@ -128,6 +131,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 - Variation vs N-1 · Indice de saisonnalité max · Moyenne mobile 12 mois · Z-score max détecté
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Série temporelle des décès | Histogramme mensuel + seuil Z-score superposé (détection anomalies) |
@@ -150,6 +154,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 - Génération dominante · Surmortalité max (Z-score) · Espérance de vie moyenne · Longévité max observée
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Distribution de mortalité par âge par génération | Courbes de mortalité normalisées par âge pour chaque cohorte |
@@ -173,6 +178,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 - Total décès centenaires · Part des Femmes · Âge moyen au décès · Nb décès super-centenaires (+110 ans)
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Évolution annuelle des décès | Courbe YoY des décès centenaires (variation) |
@@ -194,6 +200,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 Nom commune · Code INSEE · Total décès enregistrés · Rang national (sur 34 970 communes)
 
 **Visuels :**
+
 | Visuel | Description |
 |---|---|
 | Évolution annuelle des décès | Courbe temporelle lissée des décès de la commune |
