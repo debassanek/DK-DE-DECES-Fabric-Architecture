@@ -149,7 +149,7 @@ DK-DE-DECES-Fabric-Architecture/
 | 6 | Centenaires | Focus 100 ans+, super-centenaires, records, espérance de vie |
 | 7 | Profil communes | Focus sur chaque commune, tableau de bord comparatif commune vs France entière |
 
-```
+
 Pour visualiser le rapport PowerBI, voir img/PowerBI.
 
 ---
