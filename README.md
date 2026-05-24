@@ -141,7 +141,7 @@ DK-DE-DECES-Fabric-Architecture/
 
 | # | Page | Description |
 |---|---|---|
-| 1 | Overview: Vue globale | Évolution temporelle, répartition géographique nationale |
+| 1 | [Overview: Vue globale]([https://github.com/debassanek/DK-DE-DECES-Fabric-Architecture/blob/main/img/PowerBI/01_DK-DE-DECES-PBI_Overview.png]) | Évolution temporelle, répartition géographique nationale |
 | 2 | Démographie : Analyse par âge et sexe | Pyramide des décès, Part Femmes/Hommes, évolution, écarts régionaux |
 | 3 | Temporelle : Analyse dans le temps | Evolution dans le temps, saisonnalité, facteurs évènementiels, anomalies |
 | 4 | Analyse Géographique | Carte France, comparaison communes/départements/régions, densités |
