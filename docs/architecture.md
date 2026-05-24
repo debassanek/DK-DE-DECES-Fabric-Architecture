@@ -88,6 +88,7 @@ Contient toutes les colonnes Silver + 4 clés de jointure vers les tables d'agr�
 
 ![DK-DE-DECES-Fabric_Configuration Pipeline Master](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/DK-DE-DECES-Fabric_Configuration%20Pipeline%20Master.png)
 
+Un pipeline maître qui exécute les autres pipelines par couche
 ```
 MasterPipeline
 ├── BronzePipeline     (timeout 15 min, retry 1)
@@ -149,8 +150,8 @@ Ces notebooks sont importés en tant que dépendances dans les notebooks de trai
 ## Voir aussi
 
 - **[Projet principal](../README.md)** : Présentation générale du projet
-- **[Dictionnaire des données](..docs/data_dictionary.md)** : Référentiel des tables, champs et règles de gestion
-- **[Aperçu des reports](..docs/report_powerbi.md)** : Aperçu visuel des pages du rapport Power BI
+- **[Dictionnaire des données](../docs/data_dictionary.md)** : Référentiel des tables, champs et règles de gestion
+- **[Aperçu des reports](../docs/report_powerbi.md)** : Aperçu visuel des pages du rapport Power BI
 
 ---
 
