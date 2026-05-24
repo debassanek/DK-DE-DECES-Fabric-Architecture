@@ -28,6 +28,7 @@ Il couvre l'intégralité de la chaîne de valeur data :
 ## Architecture
 
 ```
+
 API data.gouv.fr
       │
       ▼
@@ -84,6 +85,7 @@ Pour le détail du flux, voir [docs/architecture.md](docs/architecture.md).
 
 ## Structure du projet
 
+![Workspace de dev](https://github.com/debassanek/DK-DE-DECES-Fabric-Architecture/blob/main/img/Fabric/DK-DE-DECES-Fabric_Workspace%20de%20dev.png)
 ```
 DK-DE-DECES-Fabric-Architecture/
 │
