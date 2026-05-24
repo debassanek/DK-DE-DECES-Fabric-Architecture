@@ -118,7 +118,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 4 — Temporelle : Analyse dans le temps
+### 4-Temporelle : Analyse dans le temps
 
 ![04_DK-DE-DECES-PBI_Temporelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/04_DK-DE-DECES-PBI_Temporelle.png)
 
@@ -140,7 +140,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 5 — Générationnelle : Analyse par cohorte
+### 5-Générationnelle : Analyse par cohorte
 
 ![05_DK-DE-DECES-PBI_Générationnelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/05_DK-DE-DECES-PBI_G%C3%A9n%C3%A9rationnelle.png)
 
@@ -163,7 +163,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 6 — Centenaires
+### 6-Centenaires
 
 ![06_DK-DE-DECES-PBI_Centenaire](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/06_DK-DE-DECES-PBI_Centenaire.png)
 
@@ -184,7 +184,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 7 — Profil commune
+### 7-Profil commune
 
 ![07_DK-DE-DECES-PBI_Profil commune](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Profil%20commune.png)
 
