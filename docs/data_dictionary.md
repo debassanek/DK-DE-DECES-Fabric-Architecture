@@ -20,7 +20,7 @@
 
 ### Fichiers bruts (`DK_DE_ListeDeces_Bronze_Ingest`)
 
-Les fichiers bruts sont stockés dans OneLake Files au format texte/CSV (format original INSEE).  
+Les fichiers bruts sont stockés dans OneLake Files au format .txt (format original INSEE).  
 Un manifeste JSON est produit par le notebook Discover et consommé par Download.
 
 **Manifeste `_discovery.json`**
