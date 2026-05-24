@@ -255,11 +255,11 @@ Les notebooks de monitoring produisent des tables de suivi des exécutions pipel
 
 ---
 
-## Retour au projet principal
+## Voir aussi
 
-- [Projet principal](../README.md)  
-- [Aperçu rapport Power BI](../docs/report_powerbi.md)  
-- [Architecture détaillée](../docs/architecture.md)
+- **[Projet principal](../README.md)** : Présentation générale du projet
+- **[Aperçu rapport Power BI](../docs/report_powerbi.md)** : Aperçu visuel des pages du rapport Power BI
+- **[Architecture détaillée](../docs/architecture.md)** : Organisation et transformation des données
 
 ---
 
