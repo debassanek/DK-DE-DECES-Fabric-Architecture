@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "DK-DE-DECES-API-BronzePipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "684e47bb-2da5-bb18-4f8a-8445886e7c08"
+  }
+}

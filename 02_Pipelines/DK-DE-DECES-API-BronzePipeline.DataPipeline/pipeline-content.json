@@ -1,0 +1,108 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "5c82b0c6-cfc4-aa6f-43cd-fdb378314adf",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "bronze_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Bronze-Discover",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "7ea370da-91a0-be6b-465a-c73d36d6b712",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "bronze_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Bronze-Dowload",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Bronze-Discover",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "8b4e97d9-f784-bf00-420f-430c98704d7b",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "bronze_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Bronze-Parse",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Bronze-Dowload",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c8857abe-7423-99fe-44ae-cd8bf7e64063",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "bronze_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:30:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Bronze-Write",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Bronze-Parse",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "concurrency": 5
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "DK_DE_DECES_API_Bronze_Ingest"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b1a5a5e0-dc45-ad48-4111-630e592237df"
+  }
+}

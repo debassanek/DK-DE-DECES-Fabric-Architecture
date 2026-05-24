@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "DK_DE_DECES_API_Silver_Clean"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3f6eca4f-e06c-be9d-48e1-a30c0359305b"
+  }
+}

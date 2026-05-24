@@ -1,0 +1,80 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "0092225e-0099-9c03-4b78-2ec3fa5810dc",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "silver_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Silver-Clean",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "afc1e480-76b8-98d4-48c8-7f5c73c8dfe4",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "silver_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Silver-Normalize",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Silver-Clean",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "0092225e-0099-9c03-4b78-2ec3fa5810dc",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "silver_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Silver-Validate",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Silver-Normalize",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

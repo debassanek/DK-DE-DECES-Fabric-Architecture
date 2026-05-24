@@ -1,0 +1,113 @@
+# =============================================================================
+#  .gitignore — DK-DE-ListeDeces-Fabric_ArchitectureAPI
+#  Adapté à : Microsoft Fabric · Power BI · PySpark · Python
+# =============================================================================
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Power BI — fichiers binaires (trop lourds et non versionables)
+# ─────────────────────────────────────────────────────────────────────────────
+*.pbix
+*.pbit
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Microsoft Fabric — fichiers sensibles ou spécifiques à l'environnement
+#  Note : les fichiers .platform et .schedules sont versionnés intentionnellement
+#         car ils contiennent la définition ALM des artefacts Fabric
+# ─────────────────────────────────────────────────────────────────────────────
+# Fichiers de cache ou état local Fabric (si présents)
+*.fabric-cache
+.fabric/
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Python
+# ─────────────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Jupyter / notebooks locaux
+# ─────────────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Données — ne jamais versionner des données réelles
+# ─────────────────────────────────────────────────────────────────────────────
+*.csv
+*.parquet
+*.json
+!**/pipeline-content.json
+!**/lakehouse.metadata.json
+!**/alm.settings.json
+!**/shortcuts.metadata.json
+*.delta/
+data/
+raw/
+output/
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Secrets et configuration locale
+# ─────────────────────────────────────────────────────────────────────────────
+.env
+.env.*
+*.key
+*.secret
+config.local.*
+secrets.yaml
+secrets.yml
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Logs
+# ─────────────────────────────────────────────────────────────────────────────
+*.log
+logs/
+*.log.*
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Système d'exploitation
+# ─────────────────────────────────────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  IDE et éditeurs
+# ─────────────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Excel — versionner uniquement les specs, pas les exports de données
+# ─────────────────────────────────────────────────────────────────────────────
+# Décommenter si l'on ne veut pas versionner le Datamart_Deces.xlsx :
+# *.xlsx
+# *.xls

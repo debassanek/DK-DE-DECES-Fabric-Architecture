@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "DK-DE-DECES-API-GoldPipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "21497b8b-24a8-b30a-4004-143d52d9443a"
+  }
+}

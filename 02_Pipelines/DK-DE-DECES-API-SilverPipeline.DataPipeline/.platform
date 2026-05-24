@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "DK-DE-DECES-API-SilverPipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a03b23f1-bbc4-b3ec-43fd-1337a12209c0"
+  }
+}

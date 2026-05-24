@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "b66c8bcf-e7bd-9701-4cb2-7650d6bb099e",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "dim_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Dim-Lieu",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "4caa801b-6988-abfd-4847-3e85f15d1250",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "dim_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Dim-Generation",
+        "dependsOn": []
+      }
+    ]
+  }
+}

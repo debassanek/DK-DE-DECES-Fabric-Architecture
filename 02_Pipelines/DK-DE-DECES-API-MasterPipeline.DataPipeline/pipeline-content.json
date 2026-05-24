@@ -1,0 +1,163 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "684e47bb-2da5-bb18-4f8a-8445886e7c08",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "f6e3161f-0d7f-4f98-9e9d-d13e563dc42d"
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-AP-Pipeline-Bronze",
+        "dependsOn": []
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "a03b23f1-bbc4-b3ec-43fd-1337a12209c0",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "f6e3161f-0d7f-4f98-9e9d-d13e563dc42d"
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-AP-Pipeline-Silver",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-AP-Pipeline-Bronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "76f0a890-f23c-9ae7-45c0-28f335ac822f",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "f6e3161f-0d7f-4f98-9e9d-d13e563dc42d"
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-AP-Pipeline-Dimension",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-AP-Pipeline-Silver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "21497b8b-24a8-b30a-4004-143d52d9443a",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "f6e3161f-0d7f-4f98-9e9d-d13e563dc42d"
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-AP-Pipeline-Gold",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-AP-Pipeline-Dimension",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "56e90f82-4726-975e-44dd-39214bea57e9",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "f6e3161f-0d7f-4f98-9e9d-d13e563dc42d"
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-AP-Pipeline-Monitoring",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-AP-Pipeline-Bronze",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          },
+          {
+            "activity": "DK-DE-AP-Pipeline-Silver",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          },
+          {
+            "activity": "DK-DE-AP-Pipeline-Dimension",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          },
+          {
+            "activity": "DK-DE-AP-Pipeline-Gold",
+            "dependencyConditions": [
+              "Failed",
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

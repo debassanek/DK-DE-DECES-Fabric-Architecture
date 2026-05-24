@@ -1,0 +1,128 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "items": {
+            "value": "@variables('liste_tables')",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "LakehouseTableSource",
+                  "sqlReaderQuery": {
+                    "value": "@concat('SELECT * FROM ', item())",
+                    "type": "Expression"
+                  },
+                  "partitionOption": "None",
+                  "datasetSettings": {
+                    "type": "LakehouseTable",
+                    "schema": [],
+                    "connectionSettings": {
+                      "name": "DK_DE_DECES_API_Gold_Build",
+                      "properties": {
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "artifactId": "b020eeb5-96e5-b2d3-4783-2ccaef922306",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
+                          "rootFolder": "Tables"
+                        },
+                        "externalReferences": {
+                          "connection": "daa49251-d211-451b-aa9d-1e0089b64730"
+                        },
+                        "annotations": []
+                      }
+                    },
+                    "annotations": []
+                  }
+                },
+                "sink": {
+                  "type": "SqlServerSink",
+                  "tableOption": "autoCreate",
+                  "sqlWriterUseTableLock": false,
+                  "writeBehavior": "insert",
+                  "datasetSettings": {
+                    "type": "SqlServerTable",
+                    "typeProperties": {
+                      "schema": "dbo",
+                      "table": {
+                        "value": "@concat('[', item(), ']')",
+                        "type": "Expression"
+                      },
+                      "database": "SOURCE_FABRIC_DECES"
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "aef69f68-d64a-4cb0-b64b-c410f600e389"
+                    },
+                    "annotations": []
+                  }
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                },
+                "enableStaging": false,
+                "enableSkipIncompatibleRow": false
+              },
+              "policy": {
+                "timeout": "0.00:30:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "DK-DE-CD-GoldtoSQL",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "DK-DE-FE_Load_GoldTablestoSQL",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-VAR-TableList-Gold",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "liste_tables",
+          "value": [
+            "agg_mortalite_age",
+            "agg_mortalite_commune",
+            "agg_mortalite_generation",
+            "agg_mortalite_mensuelle",
+            "dim_age",
+            "dim_date",
+            "dim_generation",
+            "dim_lieu",
+            "fact_deces"
+          ]
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-VAR-TableList-Gold",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "liste_tables": {
+        "type": "Array"
+      }
+    }
+  }
+}

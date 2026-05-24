@@ -1,0 +1,185 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "19e323ca-edac-8e51-456e-24713208d903",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "gold_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Gold-Fact",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "38ffd6e7-efca-a176-4ade-2e0963610c73",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "gold_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Gold-Mart",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Gold-Fact",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DK-DE-NB-Gold-AggAge",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DK-DE-NB-Gold-AggGeographie",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DK-DE-NB-Gold-AggGeneration",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DK-DE-NB-Gold-AggTemporel",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c800183d-a9fb-a252-40d9-8ddff61f70cd",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "gold_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Gold-AggAge",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Gold-Fact",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "624af8c5-12aa-8465-4289-f9034968f6f3",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "gold_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Gold-AggGeographie",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Gold-Fact",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "bebf8b8a-021a-bfaa-4660-8e26bb934226",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "gold_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Gold-AggTemporel",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Gold-Fact",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "2315f8c7-84d8-bb79-4667-ebb9afb9b521",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": {
+            "value": "gold_pipeline",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DK-DE-NB-Gold-AggGeneration",
+        "dependsOn": [
+          {
+            "activity": "DK-DE-NB-Gold-Fact",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
