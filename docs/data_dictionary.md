@@ -7,16 +7,16 @@
 
 ## Table des matières
 
-1. [Couche Bronze](#1-couche-bronze)
-2. [Couche Silver](#2-couche-silver--silver_deces)
-3. [Couche Gold : Table de faits](#3-couche-gold--fact_deces)
-4. [Couche Gold : Agrégations](#4-couche-gold--tables-dagrégation)
-5. [Dimensions](#5-dimensions)
-6. [Monitoring](#6-monitoring)
+-[Couche Bronze](#1-couche-bronze)
+-[Couche Silver](#2-couche-silver--silver_deces)
+-[Couche Gold : Table de faits](#3-couche-gold--fact_deces)
+-[Couche Gold : Agrégations](#4-couche-gold--tables-dagrégation)
+-[Dimensions](#5-dimensions)
+-[Monitoring](#6-monitoring)
 
 ---
 
-## 1. Couche Bronze
+## 1-Couche Bronze
 
 ### Fichiers bruts (`DK_DE_ListeDeces_Bronze_Ingest`)
 
@@ -45,7 +45,7 @@ Un manifeste JSON est produit par le notebook Discover et consommé par Download
 
 ---
 
-## 2. Couche Silver : `silver_deces`
+## 2-Couche Silver : `silver_deces`
 
 **Lakehouse** : `DK_DE_ListeDeces_Silver_Clean`  
 **Table Delta** : `silver_deces`  
@@ -73,7 +73,7 @@ Un manifeste JSON est produit par le notebook Discover et consommé par Download
 
 ---
 
-## 3. Couche Gold : `fact_deces`
+## 3-Couche Gold : `fact_deces`
 
 **Lakehouse** : `DK_DE_ListeDeces_Gold_Build`  
 **Table Delta** : `fact_deces`  
@@ -94,7 +94,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 ---
 
-## 4. Couche Gold : Tables d'agrégation
+## 4-Couche Gold : Tables d'agrégation
 
 ### `agg_mortalite_age`
 
@@ -168,7 +168,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 ---
 
-## 5. Dimensions
+## 5-Dimensions
 
 ### `dim_lieu`
 
@@ -229,7 +229,7 @@ Toutes les colonnes de Silver sont conservées, plus les clés de liaison vers l
 
 ---
 
-## 6. Monitoring
+## 6-Monitoring
 
 **Lakehouse** : `DK_DE_DECES_API_Monitoring`
 
