@@ -23,7 +23,7 @@
 
 Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du Lakehouse, connecté via **DirectQuery** à la place du **DirectLake** pour des raisons techniques.
 
-![Modèle en étoile](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DKDEDECESPBI_Modele_etoile.png)
+![07_DK-DE-DECES-PBI_Modèle en étoile](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Modele_etoile.png)
 
 
 ### Composition du modèle
@@ -120,7 +120,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ### 4 — Temporelle : Analyse dans le temps
 
-![04_DK-DE-DECES-PBI_Temporelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/04_DK-DE-DECES-PBI__Temporelle.png)
+![04_DK-DE-DECES-PBI_Temporelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/04_DK-DE-DECES-PBI_Temporelle.png)
 
 **Objectif :** Détecter les tendances, saisonnalités et anomalies statistiques (pics de surmortalité) sur la série temporelle.
 
@@ -186,7 +186,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ### 7 — Profil commune
 
-![07_DK-DE-DECES-PBI_Profil_commune](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Profil_commune.png)
+![07_DK-DE-DECES-PBI_Profil commune](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Profil%20commune.png)
 
 **Objectif :** Tableau de bord de drill-down sur une commune spécifique, avec comparaison systématique au niveau national.
 
