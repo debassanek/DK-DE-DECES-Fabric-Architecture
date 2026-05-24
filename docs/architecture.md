@@ -148,9 +148,9 @@ Ces notebooks sont importés en tant que dépendances dans les notebooks de trai
 
 ## Voir aussi
 
-- **[Projet principal](../README.md)**: Présentation générale du projet
-- **[Dictionnaire des données](docs/data_dictionary.md)**: Référentiel des tables, champs et règles de gestion
-- **[Aperçu des reports](docs/report_powerbi.md)**: Aperçu visuel des pages du rapport Power BI
+- **[Projet principal](../README.md)** : Présentation générale du projet
+- **[Dictionnaire des données](..docs/data_dictionary.md)** : Référentiel des tables, champs et règles de gestion
+- **[Aperçu des reports](..docs/report_powerbi.md)** : Aperçu visuel des pages du rapport Power BI
 
 ---
 
