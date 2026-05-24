@@ -1,4 +1,4 @@
-# Présentation de l'architecture : DK-DE-DECES· Microsoft Fabric
+# Architechture : DK-DE-DECES· Microsoft Fabric
 
 > Pipeline Medallion complet-Ingestion API → Delta Lake → Power BI
 
