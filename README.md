@@ -21,7 +21,7 @@ Il couvre l'intégralité de la chaîne de valeur data :
 - **Ingestion automatisée** via l'API data.gouv.fr (découverte dynamique, téléchargement résilient)
 - **Architecture Medallion** : Bronze → Silver → Gold avec Delta Lake sur OneLake
 - **Modèle décisionnel en étoile** : fact_deces + 4 dimensions + 4 tables d'agrégation
-- **Rapport Power BI** : 8 pages analytiques avec 50+ mesures DAX
+- **Rapport Power BI** : 7 pages analytiques avec 50+ mesures DAX
 
 ---
 
@@ -60,7 +60,7 @@ API data.gouv.fr
                            │
                            ▼
               Power BI - Rapport d'analyse
-              8 pages · 50+ mesures DAX
+              7 pages · 50+ mesures DAX
 ```
 
 Pour le détail du flux, voir [docs/architecture.md](docs/architecture.md).
