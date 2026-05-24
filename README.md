@@ -197,8 +197,7 @@ Le pipeline détecte l'environnement via le nom du workspace :
 
 - [Architecture détaillée](docs/architecture.md)
 - [Dictionnaire des données](docs/data_dictionary.md)
-- [Mesures DAX](04_Reports%26Dashboard/DK-BI-ListeDeces-DAX-Measures.md)
-- [Aperçu des reports](https://github.com/debassanek/DK-DE-DECES-Fabric-Architecture/tree/main/img)
+- [Aperçu des reports](https://github.com/debassanek/DK-DE-DECES-Fabric-Architecture/tree/main/img/PowerBI)
 
 ---
 
