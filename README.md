@@ -84,7 +84,7 @@ Pour le détail de l'architecture, voir [docs/architecture.md](docs/architecture
 
 ## Structure du projet
 
-![Workspace de dev](https://raw.githubusercontent.com/DK-DE-DECES-Fabric-Architecture/blob/main/img/Fabric/DK-DE-DECES-Fabric_Workspace%20de%20dev.png)
+![Workspace de dev](img/Fabric/DK-DE-DECES-Fabric_Workspace%20de%20dev.png)
 ```
 DK-DE-DECES-Fabric-Architecture/
 │
