@@ -144,11 +144,13 @@ Les tables d'agrégation sont reliées à `fact_deces` via les clés composites 
 
 Ces notebooks sont importés en tant que dépendances dans les notebooks de traitement via `%run` ou `notebookutils.notebook.run()`.
 
-## Retour au projet principal
+---
 
-- [Projet principal](../README.md)  
-- [Aperçu rapport Power BI](../docs/report_powerbi.md)  
-- [Dictionnaire des données](../docs/data_dictionary.md)
+## Voir aussi
+
+- **[Projet principal](../README.md)**: Présentation générale du projet
+- **[Dictionnaire des données](docs/data_dictionary.md)**: Référentiel des tables, champs et règles de gestion
+- **[Aperçu des reports](docs/report_powerbi.md)**: Aperçu visuel des pages du rapport Power BI
 
 ---
 
