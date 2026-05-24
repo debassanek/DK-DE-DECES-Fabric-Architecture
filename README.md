@@ -113,7 +113,7 @@ DK-DE-DECES-Fabric-Architecture/
 ├── 04_Reports&Dashboard/
 │   ├── DK-BI-ListeDeces-Reports-PowerBI.pbix   # Rapport Power BI
 │   ├── DK-BI-ListeDeces-DAX-Measures.md        # Toutes les mesures DAX documentées
-│   ├── DK-BI-ListeDeces-Maquettes.html         # Maquettes des 8 pages
+│   ├── DK-BI-ListeDeces-Maquettes.html         # Maquettes des 7 pages
 │   └── DK-BI-Guide-Navigation-PowerBI.html     # Guide visuel de navigation
 │
 ├── 90_Monitoring/
