@@ -86,12 +86,14 @@ Contient toutes les colonnes Silver + 4 clés de jointure vers les tables d'agr�
 
 ### Orchestration
 
+![DK-DE-DECES-Fabric_Configuration Pipeline Master.png](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/DK-DE-DECES-Fabric_Configuration%20Pipeline%20Master.png)
+
 ```
 MasterPipeline
 ├── BronzePipeline     (timeout 15 min, retry 1)
 ├── SilverPipeline     (dépend de Bronze → Succeeded)
 ├── GoldPipeline       (dépend de Silver → Succeeded)
-└── MonitoringPipeline (dépend de Gold → Succeeded/Failed)
+└── MonitoringPipeline (dépend de tous → Failled et Gold → Succeeded/Failed)
 
 PipelineDimensions     (planifié séparément - hebdomadaire)
 ```
