@@ -8,13 +8,13 @@
 
 - [Modèle de données](#modèle-de-données)
 - [Pages du rapport](#pages-du-rapport)
-  - [01-Overview : Vue globale](#01--overview--vue-globale)
-  - [02-Démographie : Analyse par âge et sexe](#02--démographie--analyse-par-âge-et-sexe)
-  - [03-Géographie : Analyse territoriale](#03--géographie--analyse-territoriale)
-  - [04-Temporelle : Analyse dans le temps](#04--temporelle--analyse-dans-le-temps)
-  - [05-Générationnelle : Analyse par cohorte](#05--générationnelle--analyse-par-cohorte)
-  - [06-Centenaires](#06--centenaires)
-  - [07-Profil commune](#07--profil-commune)
+  - [1-Overview : Vue globale](#1--overview--vue-globale)
+  - [2-Démographie : Analyse par âge et sexe](#2--démographie--analyse-par-âge-et-sexe)
+  - [3-Géographie : Analyse territoriale](#3--géographie--analyse-territoriale)
+  - [4-Temporelle : Analyse dans le temps](#4--temporelle--analyse-dans-le-temps)
+  - [5-Générationnelle : Analyse par cohorte](#5--générationnelle--analyse-par-cohorte)
+  - [6-Centenaires](#6--centenaires)
+  - [7-Profil commune](#7--profil-commune)
 - [Stack DAX & modélisation](#stack-dax--modélisation)
 
 ---
@@ -50,9 +50,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ## Pages du rapport
 
-### 01-Overview : Vue globale
+### 1-Overview : Vue globale
 
-![Overview](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/01_DKDEDECESPBI_Overview.png)
+![01_DK-DE-DECES-PBI_Overview](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/01_DK-DE-DECES-PBI_Overview.png)
 
 
 **Objectif :** Donner une vision synthétique et nationale de la mortalité sur l'ensemble de la période couverte.
@@ -74,9 +74,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 02-Démographie : Analyse par âge et sexe
+### 2-Démographie : Analyse par âge et sexe
 
-![Démographie](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/02_DKDEDECESPBI_D%C3%A9mographie.png)
+![02_DK-DE-DECES-PBI_Démographie](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/02_DK-DE-DECES-PBI_D%C3%A9mographie.png)
 
 **Objectif :** Explorer la structure démographique des décès : répartition par âge, sexe, et mortalité relative.
 
@@ -96,9 +96,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 03-Géographie : Analyse territoriale
+### 3-Géographie : Analyse territoriale
 
-![Géographie](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/03_DKDEDECESPBI_G%C3%A9ographie.png)
+![03_DK-DE-DECES-PBI_Géographie](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/03_DK-DE-DECES-PBI_G%C3%A9ographie.png)
 
 **Objectif :** Cartographier les disparités territoriales de mortalité à l'échelle commune, département et région.
 
@@ -118,9 +118,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 04 — Temporelle : Analyse dans le temps
+### 4 — Temporelle : Analyse dans le temps
 
-![Temporelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/04_DKDEDECESPBI_Temporelle.png)
+![04_DK-DE-DECES-PBI_Temporelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/04_DK-DE-DECES-PBI__Temporelle.png)
 
 **Objectif :** Détecter les tendances, saisonnalités et anomalies statistiques (pics de surmortalité) sur la série temporelle.
 
@@ -140,9 +140,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 05 — Générationnelle : Analyse par cohorte
+### 5 — Générationnelle : Analyse par cohorte
 
-![Générationnelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/05_DKDEDECESPBI_G%C3%A9n%C3%A9rationnelle.png)
+![05_DK-DE-DECES-PBI_Générationnelle](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/05_DK-DE-DECES-PBI_G%C3%A9n%C3%A9rationnelle.png)
 
 **Objectif :** Comparer les profils de mortalité par cohorte de naissance (Greatest Generation, Silent Generation, Baby Boomers, Gen X).
 
@@ -163,9 +163,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 06 — Centenaires
+### 6 — Centenaires
 
-![Centenaires](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/06_DKDEDECESPBI_Centenaire.png)
+![06_DK-DE-DECES-PBI_Centenaire](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/06_DK-DE-DECES-PBI_Centenaire.png)
 
 **Objectif :** Focus sur la population des 100 ans et plus : répartition, tendances et géographie des centenaires.
 
@@ -184,9 +184,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 07 — Profil commune
+### 7 — Profil commune
 
-![Profil commune](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DKDEDECESPBI_Profil_commune.png)
+![07_DK-DE-DECES-PBI_Profil_commune](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Profil_commune.png)
 
 **Objectif :** Tableau de bord de drill-down sur une commune spécifique, avec comparaison systématique au niveau national.
 
