@@ -2,6 +2,7 @@
 
 > **DK-DE-DECES · Microsoft Fabric · Architecture Médaillon**  
 > Rapport d'analyse de la mortalité française : 7 pages analytiques · 50+ mesures DAX
+
 ---
 
 ## Table des matières
