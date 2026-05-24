@@ -1,6 +1,5 @@
-# DK-DE-DECES· Fabric-Architecture
 
-> **Projet Data Engineering (Cloud)· Microsoft Fabric · Architecture Médaillon**  
+> **Data Engineering (Cloud) end-to-end· Microsoft Fabric · Architecture Médaillon**  
 > Pipeline médallion complet: de l'API data.gouv.fr jusqu'au rapport Power BI
 
 ![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-0078D4?style=flat&logo=microsoft&logoColor=white)
