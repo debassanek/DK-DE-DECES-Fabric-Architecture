@@ -224,7 +224,7 @@ Le rapport mobilise **50+ mesures DAX** organisées en catégories fonctionnelle
 
 ## Retour au projet principal
 
-- [README principal](../README.md)  
+- [Projet principal](../README.md)  
 - [Architecture détaillée](../docs/architecture.md)  
 - [Dictionnaire des données](../docs/data_dictionary.md)
 
