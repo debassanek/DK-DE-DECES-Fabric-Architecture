@@ -54,7 +54,7 @@ flowchart TD
     end
 
     subgraph BI["📊 Power BI"]
-        P1["Rapport 8 pages\n50+ mesures DAX"]
+        P1["Rapport 7 pages\n50+ mesures DAX"]
     end
 
     subgraph MONITORING["🔍 Monitoring — DK_DE_DECES_API_Monitoring"]
