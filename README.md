@@ -1,7 +1,7 @@
-# DK-DE — Liste Décès · Fabric Architecture API
+# DK-DE-DECES· Fabric- Architecture Medailon
 
-> **Projet Data Engineering · Microsoft Fabric · Portfolio**  
-> Pipeline Medallion complet — de l'API data.gouv.fr jusqu'au rapport Power BI
+> **Projet Data Engineering (Cloud)· Microsoft Fabric · Architecture Medaillon**  
+> Pipeline Medallion complet: de l'API data.gouv.fr jusqu'au rapport Power BI
 
 ![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-0078D4?style=flat&logo=microsoft&logoColor=white)
 ![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat&logo=apachespark&logoColor=white)
@@ -59,7 +59,7 @@ API data.gouv.fr
 └──────────────────────────┬──────────────────────────────────────┘
                            │
                            ▼
-              Power BI — Rapport d'analyse
+              Power BI - Rapport d'analyse
               8 pages · 50+ mesures DAX
 ```
 
@@ -169,8 +169,8 @@ Le pipeline détecte l'environnement via le nom du workspace :
 
 | Workspace contient | Environnement | Comportement |
 |---|---|---|
-| `Dev` | dev | Traite 1 année de données |
-| `Test` | test | Traite 3 années de données |
+| `Dev` | dev | Traite 3 année de données |
+| `Test` | test | Traite 5 années de données |
 | *(autre)* | prod | Traite l'intégralité des fichiers disponibles |
 
 ---
