@@ -63,7 +63,7 @@ API data.gouv.fr
               7 pages · 50+ mesures DAX
 ```
 
-Pour le détail de l'architecture, voir [docs/architecture.md](docs/architecture.md).
+Pour le détail de l'architecture, cliquer => [docs/architecture.md](docs/architecture.md).
 
 ---
 
