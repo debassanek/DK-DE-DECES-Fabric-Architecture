@@ -2,7 +2,6 @@
 
 > Projet : Analyse de la Mortalité en France · Microsoft Fabric  
 > Format de stockage : Delta Lake (OneLake)  
-> Dernière mise à jour : 2026-05
 
 ---
 
