@@ -1,4 +1,4 @@
-# DK-DE-DECES· Fabric-Architecture Médaillon
+# DK-DE-DECES· Fabric-Architecture
 
 > **Projet Data Engineering (Cloud)· Microsoft Fabric · Architecture Médaillon**  
 > Pipeline médallion complet: de l'API data.gouv.fr jusqu'au rapport Power BI
@@ -19,7 +19,7 @@ Ce projet implémente un pipeline **Data Engineering end-to-end** sur **Microsof
 Il couvre l'intégralité de la chaîne de valeur data :
 
 - **Ingestion automatisée** via l'API data.gouv.fr (découverte dynamique, téléchargement résilient)
-- **Architecture Medallion** : Bronze → Silver → Gold avec Delta Lake sur OneLake
+- **Architecture Médallion** : Bronze → Silver → Gold avec Delta Lake sur OneLake
 - **Modèle décisionnel en étoile** : fact_deces + 4 dimensions + 4 tables d'agrégation
 - **Rapport Power BI** : 7 pages analytiques avec 50+ mesures DAX
 
