@@ -252,3 +252,15 @@ Les notebooks de monitoring produisent des tables de suivi des exécutions pipel
 | **Codes INSEE** | Toujours zfill à 5 caractères pour les communes, 2-3 pour les départements |
 | **Valeurs manquantes** | `null` natif Delta (jamais chaîne vide `""` pour les codes) |
 | **Environnements** | Dev (1 an) · Test (3 ans) · Prod (complet) : détection automatique |
+
+---
+
+## Retour au projet principal
+
+- [Projet principal](../README.md)  
+- [Aperçu rapport Power BI](../docs/report_powerbi.md)  
+- [Architecture détaillée](../docs/architecture.md)
+
+---
+
+Auteur : Debassane K. · Data & BI · debassanek@gmail.com
