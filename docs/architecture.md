@@ -1,6 +1,6 @@
 # Architechture : DK-DE-DECES· Microsoft Fabric
 
-> Pipeline Medallion complet-Ingestion API → Delta Lake → Power BI
+> Pipeline Medallion complet : Ingestion API → Delta Lake → Power BI
 
 ---
 
@@ -8,7 +8,7 @@
 
 Ce projet implémente une **architecture Médallion** (Bronze / Silver / Gold) sur Microsoft Fabric. Chaque couche a une responsabilité unique et produit des données consommables par la couche suivante via Delta Lake sur OneLake.
 
-![Architeture Médaillon-DK-DE-DECES](https://github.com/debassanek/DK-DE-DECES-Fabric-Architecture/blob/main/img/Fabric/DK-DE-Architecture-Medallion.png)
+![DK-DE-Architecture-Medallion](img/Fabric/DK-DE-Architecture-Medallion.png)
 
 ---
 
