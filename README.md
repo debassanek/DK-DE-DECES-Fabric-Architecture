@@ -151,7 +151,7 @@ DK-DE-DECES-Fabric-Architecture/
 
 ```
 Pour visualiser le rapport PowerBI, voir img/PowerBI.
-```
+
 ---
 
 ## Lancer le pipeline
