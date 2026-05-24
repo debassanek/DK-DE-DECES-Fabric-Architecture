@@ -194,7 +194,7 @@ Le pipeline détecte l'environnement via le nom du workspace :
 
 ## Voir aussi
 
-- **[Architecture détaillée](docs/architecture.md)**: Comment les données sont organisées et transformées
+- **[Architecture détaillée](docs/architecture.md)**: Organisation et transformation des données
 - **[Dictionnaire des données](docs/data_dictionary.md)**: Référentiel des tables, champs et règles de gestion
 - **[Aperçu des reports](docs/report_powerbi.md)**: Aperçu visuel des pages du rapport Power BI
 
