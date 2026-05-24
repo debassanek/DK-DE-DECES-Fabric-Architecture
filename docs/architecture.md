@@ -143,3 +143,13 @@ Les tables d'agrégation sont reliées à `fact_deces` via les clés composites 
 | `Utils-ValidationUtils` | Contrôles qualité réutilisables (null check, volumétrie, plages) |
 
 Ces notebooks sont importés en tant que dépendances dans les notebooks de traitement via `%run` ou `notebookutils.notebook.run()`.
+
+## Retour au projet principal
+
+- [Projet principal](../README.md)  
+- [Aperçu rapport Power BI](../docs/report_powerbi.md)  
+- [Dictionnaire des données](../docs/data_dictionary.md)
+
+---
+
+Auteur : Debassane K. · Data & BI · debassanek@gmail.com
