@@ -1,4 +1,4 @@
-# DK-DE-DECES· Fabric- Architecture Médaillon
+# DK-DE-DECES· Fabric-Architecture Médaillon
 
 > **Projet Data Engineering (Cloud)· Microsoft Fabric · Architecture Médaillon**  
 > Pipeline médallion complet: de l'API data.gouv.fr jusqu'au rapport Power BI
@@ -85,7 +85,7 @@ Pour le détail du flux, voir [docs/architecture.md](docs/architecture.md).
 ## Structure du projet
 
 ```
-DK-DE-ListeDeces-Fabric_ArchitectureAPI/
+DK-DE-DECES-Fabric-Architecture/
 │
 ├── 01_Notebooks/
 │   ├── 01_Bronze/          # Discover · Download · Parse · Write
@@ -100,7 +100,7 @@ DK-DE-ListeDeces-Fabric_ArchitectureAPI/
 │   ├── GoldPipeline        # Construction modèle
 │   ├── PipelineDimensions  # Chargement dimensions (planifié)
 │   ├── MonitoringPipeline  # Observabilité
-│   └── CopyData_pl         # Utilitaire copie données
+│   └── CopyData_pl         # Utilitaire copie données test en local via SQL server
 │
 ├── 03_Lakehouses/
 │   ├── DK_DE_ListeDeces_Bronze_Ingest.Lakehouse
@@ -130,7 +130,7 @@ DK-DE-ListeDeces-Fabric_ArchitectureAPI/
 │   ├── architecture.md                         # Architecture détaillée + diagrammes
 │   └── data_dictionary.md                      # Dictionnaire des données (toutes les tables)
 │
-├── Datamart_Deces.xlsx                         # Spécifications du datamart
+├── Datamart_Deces.xlsx                         # Aperçu du datamart
 ├── .gitignore
 └── README.md
 ```
@@ -141,14 +141,13 @@ DK-DE-ListeDeces-Fabric_ArchitectureAPI/
 
 | # | Page | Description |
 |---|---|---|
-| 1 | Vue Nationale | Évolution temporelle, répartition géographique nationale |
-| 2 | Analyse par Genre | Part Femmes/Hommes, évolution, écarts régionaux |
-| 3 | Analyse par Âge | Pyramide des décès, tranches d'âge, âge moyen |
-| 4 | Analyse Géographique | Carte France, comparaison départements/régions |
+| 1 | Overview: Vue globale | Évolution temporelle, répartition géographique nationale |
+| 2 | Démographie : Analyse par âge et sexe | Pyramide des décès, Part Femmes/Hommes, évolution, écarts régionaux |
+| 3 | Temporelle : Analyse dans le temps | Evolution dans le temps, saisonnalité, facteurs évènementiels, anomalies |
+| 4 | Analyse Géographique | Carte France, comparaison communes/départements/régions, densités |
 | 5 | Analyse Générationnelle | Décès par cohorte de naissance |
-| 6 | Centenaires | Focus 100 ans+, super-centenaires, records |
-| 7 | KPI vs Moyenne Nationale | Tableau de bord comparatif commune vs France entière |
-| 8 | Tendances & Projections | Tendances multi-annuelles |
+| 6 | Centenaires | Focus 100 ans+, super-centenaires, records, espérance de vie |
+| 7 | Profil communes | Focus sur chaque commune, tableau de bord comparatif commune vs France entière |
 
 ---
 
@@ -177,14 +176,14 @@ Le pipeline détecte l'environnement via le nom du workspace :
 
 ## Source des données
 
-- **Fichier des personnes décédées** — INSEE / data.gouv.fr  
+- **Fichier des personnes décédées** - INSEE / data.gouv.fr  
   Données publiques en open data, mise à jour mensuelle  
   Environ 600 000 décès par an, couvrant 1970 à aujourd'hui
 
-- **Référentiel communes** — API geo.api.gouv.fr  
+- **Référentiel communes** - API geo.api.gouv.fr  
   Coordonnées GPS, département, région, superficie
 
-- **Population communale** — API INSEE Métadonnées  
+- **Population communale** - API INSEE Métadonnées  
   Population légale par commune pour calcul de densité
 
 ---
@@ -194,6 +193,7 @@ Le pipeline détecte l'environnement via le nom du workspace :
 - [Architecture détaillée](docs/architecture.md)
 - [Dictionnaire des données](docs/data_dictionary.md)
 - [Mesures DAX](04_Reports%26Dashboard/DK-BI-ListeDeces-DAX-Measures.md)
+- [Aperçu des reports]
 
 ---
 
