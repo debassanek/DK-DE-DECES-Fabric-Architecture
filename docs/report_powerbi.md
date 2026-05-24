@@ -1,32 +1,27 @@
-# 📊 Rapport Power BI — Aperçus & Description
+# Rapport Power BI : Aperçus & Description
 
 > **DK-DE-DECES · Microsoft Fabric · Architecture Médaillon**  
-> Rapport d'analyse de la mortalité française — 7 pages analytiques · 50+ mesures DAX
-
-[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com)
-[![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat&logo=microsoft&logoColor=white)](https://learn.microsoft.com/fr-fr/dax/)
-[![DirectLake](https://img.shields.io/badge/DirectLake-0078D4?style=flat&logo=microsoft&logoColor=white)](https://learn.microsoft.com/fr-fr/fabric/get-started/direct-lake-overview)
-
+> Rapport d'analyse de la mortalité française : 7 pages analytiques · 50+ mesures DAX
 ---
 
 ## Table des matières
 
 - [Modèle de données](#modèle-de-données)
 - [Pages du rapport](#pages-du-rapport)
-  - [01 — Overview : Vue globale](#01--overview--vue-globale)
-  - [02 — Démographie : Analyse par âge et sexe](#02--démographie--analyse-par-âge-et-sexe)
-  - [03 — Géographie : Analyse territoriale](#03--géographie--analyse-territoriale)
-  - [04 — Temporelle : Analyse dans le temps](#04--temporelle--analyse-dans-le-temps)
-  - [05 — Générationnelle : Analyse par cohorte](#05--générationnelle--analyse-par-cohorte)
-  - [06 — Centenaires](#06--centenaires)
-  - [07 — Profil commune](#07--profil-commune)
+  - [01-Overview : Vue globale](#01--overview--vue-globale)
+  - [02-Démographie : Analyse par âge et sexe](#02--démographie--analyse-par-âge-et-sexe)
+  - [03-Géographie : Analyse territoriale](#03--géographie--analyse-territoriale)
+  - [04-Temporelle : Analyse dans le temps](#04--temporelle--analyse-dans-le-temps)
+  - [05-Générationnelle : Analyse par cohorte](#05--générationnelle--analyse-par-cohorte)
+  - [06-Centenaires](#06--centenaires)
+  - [07-Profil commune](#07--profil-commune)
 - [Stack DAX & modélisation](#stack-dax--modélisation)
 
 ---
 
 ## Modèle de données
 
-Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du Lakehouse, connecté via **DirectLake** pour des performances optimales.
+Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du Lakehouse, connecté via **DirectQuery** à la place du **DirectLake** pour des raisons techniques.
 
 ![Modèle en étoile](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DKDEDECESPBI_Modele_etoile.png)
 
@@ -55,7 +50,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ## Pages du rapport
 
-### 01 — Overview : Vue globale
+### 01-Overview : Vue globale
 
 ![Overview](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/01_DKDEDECESPBI_Overview.png)
 
@@ -79,11 +74,11 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 02 — Démographie : Analyse par âge et sexe
+### 02-Démographie : Analyse par âge et sexe
 
 ![Démographie](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/02_DKDEDECESPBI_D%C3%A9mographie.png)
 
-**Objectif :** Explorer la structure démographique des décès — répartition par âge, sexe, et mortalité relative.
+**Objectif :** Explorer la structure démographique des décès : répartition par âge, sexe, et mortalité relative.
 
 **KPIs en-tête :**
 - Âge moyen au décès Femmes / Hommes · Âge médian global · Écart longévité F/H · Indice de survie · Nb décès mineurs
@@ -101,7 +96,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ---
 
-### 03 — Géographie : Analyse territoriale
+### 03-Géographie : Analyse territoriale
 
 ![Géographie](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/03_DKDEDECESPBI_G%C3%A9ographie.png)
 
@@ -115,9 +110,9 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 |---|---|
 | Top 15 communes | Classement horizontal des communes les plus touchées en volume absolu |
 | Scatter : densité vs mortalité | Nuage de points croisant densité de décès et taux de mortalité, avec taille = volume |
-| Mortalité par région | Carte choroplèthe rouge — intensité proportionnelle au taux de mortalité |
+| Mortalité par région | Carte choroplèthe rouge : intensité proportionnelle au taux de mortalité |
 | Répartition des décès par territoire | Treemap des régions avec volumes absolus |
-| Vieillissement au décès par région | Carte choroplèthe rose/violet — indice de vieillissement médian par région |
+| Vieillissement au décès par région | Carte choroplèthe rose/violet : indice de vieillissement médian par région |
 
 **Filtres disponibles :** Région · Département · Commune · Année décès · Sexe · Est Métropole
 
@@ -172,7 +167,7 @@ Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du 
 
 ![Centenaires](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/06_DKDEDECESPBI_Centenaire.png)
 
-**Objectif :** Focus sur la population des 100 ans et plus — répartition, tendances et géographie des centenaires.
+**Objectif :** Focus sur la population des 100 ans et plus : répartition, tendances et géographie des centenaires.
 
 **KPIs en-tête :**
 - Total décès centenaires · Part des Femmes · Âge moyen au décès · Nb décès super-centenaires (+110 ans)
@@ -224,15 +219,14 @@ Le rapport mobilise **50+ mesures DAX** organisées en catégories fonctionnelle
 | Temporel | Variation N-1, Moyenne mobile 12 mois, Taux variation YoY |
 | Génération | Surmortalité par génération, Longévité max, Espérance de vie moy. |
 
-> 📄 Toutes les mesures DAX sont documentées dans [`04_Reports&Dashboard/DK-BI-ListeDeces-DAX-Measures.md`](../04_Reports%26Dashboard/DK-BI-ListeDeces-DAX-Measures.md)
 
 ---
 
 ## Retour au projet principal
 
-➡️ [README principal](../README.md)  
-➡️ [Architecture détaillée](../docs/architecture.md)  
-➡️ [Dictionnaire des données](../docs/data_dictionary.md)
+- [README principal](../README.md)  
+- [Architecture détaillée](../docs/architecture.md)  
+- [Dictionnaire des données](../docs/data_dictionary.md)
 
 ---
 
