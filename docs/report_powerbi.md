@@ -23,7 +23,7 @@
 
 Le rapport repose sur un **modèle en étoile** construit sur la couche Gold du Lakehouse, connecté via **DirectQuery** à la place du **DirectLake** pour des raisons techniques.
 
-![07_DK-DE-DECES-PBI_Modèle en étoile](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Modele_etoile.png)
+![07_DK-DE-DECES-PBI_Modele etoile](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Modele%20etoile.png)
 
 
 ### Composition du modèle
