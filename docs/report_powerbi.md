@@ -228,12 +228,12 @@ Le rapport mobilise **50+ mesures DAX** organisées en catégories fonctionnelle
 | Génération | Surmortalité par génération, Longévité max, Espérance de vie moy. |
 
 
-Toutes les mesures DAX sont documentées dans **[mesures_dax.md](docs/mesures_dax.md)**
+Toutes les mesures DAX sont documentées dans **[mesures_dax](../docs/mesures_dax.md)**
 
 
 ---
 
-## Retour au projet principal
+## Voir aussi
 
 - **[Projet principal](../README.md)** : Présentation générale du projet
 - **[Architecture détaillée](../docs/architecture.md)** : Organisation et transformation des données
