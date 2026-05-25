@@ -1,3 +1,5 @@
+# Liste des mesures DAX : DK-DE-DECES . Microsoft Power BI
+
 | Table | Mesure | Expression DAX |
 |---|---|---|
 | _mesures | % Centenaires |  DIVIDE(     [Nb centenaires],     [Total décès],     0 ) |
