@@ -7,12 +7,12 @@
 
 ## Table des matières
 
--[Couche Bronze](#1-couche-bronze)
--[Couche Silver](#2-couche-silver--silver_deces)
--[Couche Gold : Table de faits](#3-couche-gold--fact_deces)
--[Couche Gold : Agrégations](#4-couche-gold--tables-dagrégation)
--[Dimensions](#5-dimensions)
--[Monitoring](#6-monitoring)
+- [Couche Bronze](#1-couche-bronze)
+- [Couche Silver](#2-couche-silver--silver_deces)
+- [Couche Gold : Table de faits](#3-couche-gold--fact_deces)
+- [Couche Gold : Agrégations](#4-couche-gold--tables-dagrégation)
+- [Dimensions](#5-dimensions)
+- [Monitoring](#6-monitoring)
 
 ---
 
