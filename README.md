@@ -163,7 +163,7 @@ Le pipeline est conçu pour tourner entièrement dans Fabric. Il n'y a pas d'ex�
 
 1. Importer le workspace depuis le repo Git (Fabric ALM / Git Integration)
 2. Vérifier les connexions Lakehouse dans chaque notebook (IDs auto-résolus via ALM)
-3. Déclencher **MasterPipeline** — il enchaîne automatiquement Bronze → Silver → Gold → Dimensions
+3. Déclencher **MasterPipeline** : il enchaîne automatiquement Bronze → Silver → Gold → Dimensions
 4. Le pipeline **PipelineDimensions** est planifié (schedule hebdomadaire) pour les mises à jour dim_lieu
 
 ### Environnements supportés
