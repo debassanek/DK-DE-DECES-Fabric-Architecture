@@ -10,7 +10,13 @@
 ![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat&logo=microsoft&logoColor=white)
 
 ---
+## Le Pourquoi de ce projet 
 
+Les données publiques de mortalité en France existent, sont ouvertes, mises à jour chaque mois. Cependant, elles arrivent sous forme de fichiers texte/csv bruts, non structurés, sans modèle, sans historique consolidé. On ne peut pas les analyser directement. Je voulais construire le pipeline qui manque : ingérer ces fichiers automatiquement, les nettoyer, les transformer en un modèle exploitable, et les exposer à un outil de visualisation, le tout sur une infrastructure cloud moderne, sans intervention manuelle.
+
+Le projet est entièrement documenté et ouvert : toute personne intéressée par cette thématique peut s'appuyer sur les résultats, l'améliorer, reproduire le pipeline sur ses propres données ou l'étendre selon ses besoins.
+
+---
 ## Vue d'ensemble
 
 Ce projet implémente un pipeline **Data Engineering end-to-end** sur **Microsoft Fabric**, analysant les données de mortalité françaises publiées par [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/).
@@ -21,6 +27,7 @@ Il couvre l'intégralité de la chaîne de valeur data :
 - **Architecture Médallion** : Bronze → Silver → Gold avec Delta Lake sur OneLake
 - **Modèle décisionnel en étoile** : fact_deces + 4 dimensions + 4 tables d'agrégation
 - **Rapport Power BI** : 7 pages analytiques avec 50+ mesures DAX
+- **Résultats test** : 3 années couvertes sur 1,84 million de lignes (1 lignes=1 décès).
 
 ---
 
