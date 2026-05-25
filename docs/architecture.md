@@ -86,7 +86,7 @@ Contient toutes les colonnes Silver + 4 clés de jointure vers les tables d'agr�
 
 ### Orchestration
 
-![DK-DE-DECES-Fabric_Configuration Pipeline Master](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/DK-DE-DECES-Fabric_Configuration%20Pipeline%20Master.png)
+![Fabric/DK-DE-DECES-Fabric_Configuration Pipeline Master](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/Fabric/DK-DE-DECES-Fabric_Configuration%20Pipeline%20Master.png)
 
 Un pipeline maître qui exécute les autres pipelines par couche
 ```
