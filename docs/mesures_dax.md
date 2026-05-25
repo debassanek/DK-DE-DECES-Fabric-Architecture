@@ -5,11 +5,11 @@
 | _mesures | % Centenaires |  DIVIDE(     [Nb centenaires],     [Total décès],     0 ) |
 | _mesures | % Centenaires 100-104 |  DIVIDE( [Centenaires 100-104], [Nb Centenaires] ) |
 | _mesures | % Communes anomalie |  DIVIDE(     [Communes anomalie],     DISTINCTCOUNT(         agg_mortalite_commune[ID commune]     ) ) |
-| _mesures | % Femmes |  DIVIDE( [Total décès], [Total femmes] ) |
+| _mesures | % Femmes |  DIVIDE( [Total femmes], [Total décès]) |
 | _mesures | % Femmes Centenaires |  DIVIDE(     CALCULATE( [Nb Centenaires], fact_deces[sexe] = "F" ),     [Nb Centenaires] ) |
 | _mesures | % Garçons Mineurs |  DIVIDE(     CALCULATE( [Nb mineurs], fact_deces[sexe] = "M" ),     [Nb mineurs] ) |
 | _mesures | % Homme Centenaires |  DIVIDE(     CALCULATE( [Nb Centenaires], fact_deces[sexe] = "M" ),     [Nb Centenaires] ) |
-| _mesures | % Hommes |  DIVIDE( [Total décès], [Total hommes] ) |
+| _mesures | % Hommes |  DIVIDE([Total hommes] , [Total décès]) |
 | _mesures | % Mineurs |  DIVIDE(     [Nb mineurs],     [Total décès],     0 ) |
 | _mesures | % Nourrissons / Mineurs |  DIVIDE( [Nb Décès 0-1 an], [Nb mineurs] ) |
 | _mesures | % Survie à l'Âge X |  VAR _AgeCourant = SELECTEDVALUE( dim_age[age] ) VAR _TotalGen   = CALCULATE( [Décès génération], ALL(dim_age) ) VAR _DecesAvant = CALCULATE(     [Décès génération],     FILTER( ALL(dim_age), dim_age[age] <= _AgeCourant ) ) RETURN 1 - DIVIDE( _DecesAvant, _TotalGen ) |
