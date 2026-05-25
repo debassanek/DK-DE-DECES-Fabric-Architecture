@@ -151,7 +151,7 @@ DK-DE-DECES-Fabric-Architecture/
 | 7 | Profil communes | Focus sur chaque commune, tableau de bord comparatif commune vs France entière |
 
 
-Pour visualiser le rapport PowerBI, voir img/PowerBI.
+Pour visualiser le rapport PowerBI, cliquer => **[Aperçu des reports](docs/report_powerbi.md)**.
 
 ---
 
