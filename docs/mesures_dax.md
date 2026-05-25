@@ -125,7 +125,7 @@
 | _mesures | Z-Score Cohorte |   VAR _AnNaissance = SELECTEDVALUE( agg_mortalite_generation[Année naissance] )  VAR _TableCohortes =     ADDCOLUMNS(         ALL( agg_mortalite_generation[Année naissance] ),         "AgeMoyen", CALCULATE( AVERAGE( fact_deces[Age au décès] ) )     )  VAR _AgeCourant  = CALCULATE( AVERAGE( fact_deces[Age au décès] ) ) VAR _MoyGlobale  = AVERAGEX( _TableCohortes, [AgeMoyen] ) VAR _Ecart       = STDEVX.P( _TableCohortes, [AgeMoyen] )  RETURN     DIVIDE( _AgeCourant - _MoyGlobale, _Ecart ) |
 | _mesures | Z-Score Commune |  VAR _Obs   = [Total décès] VAR _Moy   = CALCULATE( AVERAGEX( ALL(dim_lieu[Libellé commune]), [Total décès] ) ) VAR _Ecart = CALCULATE(     STDEVX.P( ALL(dim_lieu[Libellé commune]), [Total décès] ) ) RETURN DIVIDE( _Obs - _Moy, _Ecart ) |
 | _mesures | Z-score max | MAX(agg_mortalite_mensuelle[Z score]) |
-| _param | _C Blanc | "#FFFFF" |
+| _param | _C Blanc | "#FFFFFF" |
 | _param | _C Bleu | "#4A90D9" |
 | _param | _C Cyan | "#00BCD4" |
 | _param | _C Gris | "#A0A0A0" |
