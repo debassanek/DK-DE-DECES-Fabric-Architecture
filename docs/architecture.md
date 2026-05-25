@@ -1,6 +1,6 @@
 # Architechture : DK-DE-DECES· Microsoft Fabric
 
-> Pipeline Medallion complet : Ingestion API → Delta Lake → Power BI
+> Pipeline Médallion complet : Ingestion API → Delta Lake → Power BI
 
 ---
 
@@ -17,7 +17,7 @@ Ce projet implémente une **architecture Médallion** (Bronze / Silver / Gold) s
 ### Bronze : Ingestion brute
 
 **Lakehouse** : `DK_DE_ListeDeces_Bronze_Ingest`  
-**Principe** : conserver les données sources dans leur format d'origine. Aucune transformation métier.
+**Principe** : conserver les données sources dans leur format d'origine (txt). Aucune transformation métier.
 
 | Notebook | Rôle | Sortie |
 |---|---|---|
@@ -115,6 +115,9 @@ PipelineDimensions     (planifié séparément - hebdomadaire)
 ---
 
 ## Modèle en étoile Power BI
+
+
+![PowerBI/07_DK-DE-DECES-PBI_Modele etoile](https://raw.githubusercontent.com/debassanek/DK-DE-DECES-Fabric-Architecture/main/img/PowerBI/07_DK-DE-DECES-PBI_Modele%20etoile.png)
 
 ```
                     dim_date
