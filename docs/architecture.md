@@ -1,4 +1,4 @@
-# Architechture : DK-DE-DECES· Microsoft Fabric
+# Architecture : DK-DE-DECES· Microsoft Fabric
 
 > Pipeline Médallion complet : Ingestion API → Delta Lake → Power BI
 
@@ -73,7 +73,7 @@ Contient toutes les colonnes Silver + 4 clés de jointure vers les tables d'agr�
 ### Dimensions
 
 **Lakehouse** : `DK_DE_Source_Dim`  
-**Mise à jour** : planifiée habdomadairement (PipelineDimensions avec schedule)
+**Mise à jour** : planifiée hebdomadairement (PipelineDimensions avec schedule)
 
 | Dimension | Source | Clé primaire |
 |---|---|---|
