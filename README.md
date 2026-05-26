@@ -24,7 +24,7 @@ Ce projet implémente un pipeline **Data Engineering end-to-end** sur **Microsof
 Il couvre l'intégralité de la chaîne de valeur data :
 
 - **Ingestion automatisée** via l'API data.gouv.fr (découverte dynamique, téléchargement résilient)
-- **Architecture Médallion** : Bronze → Silver → Gold avec Delta Lake sur OneLake
+- **Architecture Médaillon** : Bronze → Silver → Gold avec Delta Lake sur OneLake
 - **Modèle décisionnel en étoile** : fact_deces + 4 dimensions + 4 tables d'agrégation
 - **Rapport Power BI** : 7 pages analytiques avec 50+ mesures DAX
 - **Résultats test** : 3 années couvertes sur 1,84 million de lignes (1 lignes=1 décès).
